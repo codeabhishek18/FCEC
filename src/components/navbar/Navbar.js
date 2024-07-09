@@ -48,10 +48,6 @@ export const navIcons = [
         src: forum
     },
     {
-        id: 3,
-        src: chat
-    },
-    {
         id: 4,
         src: settings
     },
@@ -61,32 +57,36 @@ export const navIcons = [
 const Navbar = () =>
 {
 
-    const [slide, setSlide] = useState(false)
+    const [slide, setSlide] = useState(true)
     const [active, setActive] = useState(0)
 
     return(
         <div className={navbar.container}>
-            <h1 className={navbar.title}>FCEC</h1>
             <div className={navbar.icons}>
                 {navIcons.map((icon)=>
                 (
                     <img className={navbar.icon} src={icon.src} alt='icon' onClick={()=>setActive(icon.id)}/>
                 ))}
             </div>
-            {slide && <div className={navbar.pointers}>
+            <div className={navbar.fixed}>
+                
+            </div>
+            {/* <div className={slide ? `${navbar.pointers} ${navbar.show}` : navbar.hide}>
                 {navItems.map((item)=>
                 (
-                    <p className={item.id === active ? `${navbar.pointer} ${navbar.dot}`: navbar.pointer}></p>
+                    <div className={navbar.pointerContainer}>
+                        <p className={item.id === active ? `${navbar.pointer} ${navbar.dot}`: navbar.pointer}></p>
+                    </div>
                 ))}
-            </div>}
-            <div className={slide ? `${navbar.slide} ${navbar.headers}` : navbar.headers}>
+            </div> */}
+            {/* <div className={slide ? `${navbar.slide} ${navbar.headers}` : navbar.headers}>
                 {navItems.map((item) =>
                 (
                     <p className={item.id === active ? `${navbar.name} ${navbar.active}` : navbar.name} key={item.id} onClick={()=> setActive(item.id)}>{item.name}</p>
                 ))}
-            </div>
-            <img className={navbar.arrow} src={slide ? right : left} alt='left' onClick={()=> setSlide(!slide)}/>
-            <img className={navbar.logout} src={logout} alt='logout'/>
+            </div> */}
+            {/* <img className={navbar.arrow} src={slide ? right : left} alt='left' onClick={()=> setSlide(!slide)}/> */}
+            {/* <img className={navbar.logout} src={logout} alt='logout'/> */}
         </div>
     )
 }

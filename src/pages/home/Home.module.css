@@ -1,5 +1,243 @@
 .container
 {
+    background-color: var(--primary-bg);
+    color: var(--secondary-color);
+    display: flex;
+    position: relative;
+}
+
+.content
+{
     width: 100%;
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    column-gap: 20px;
+}
+
+.tracker
+{
+    width: 40%;
+}
+
+.support
+{
+    height:50px;
+    width: fit-content;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    border-radius:50%;
+    cursor: pointer;
+    z-index: 1;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.sessions
+{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.sessionDiv,.tracker
+{
+    margin: 0;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    color: black;
+}
+
+.sessionDiv
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tracker
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header, .footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title
+{
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.mentor
+{
+    font-size: 20px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.mentor>span
+{
+    color: var(--primary-color);
+}
+
+.certificate
+{
     background-color: black;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.certificate>img
+{
+    height: 20px;
+}
+
+.sessionContent
+{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.agenda, .statusIcon
+{
+    height: 20px;
+    cursor: pointer;
+}
+
+.status
+{
+    color: var(--primary-color);
+    border-radius: 5px;
+    font-weight: 500;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.sessionName
+{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.progress
+{
+    position: relative;
+}
+
+.progressTitle
+{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    font-size: 84px;
+    color: rgba(0,0,0,0.05);
+    font-weight: 700;
+}
+
+.pendingSessions
+{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.sessionHeader
+{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+@media screen and (max-width:1120px)
+{
+    .container
+    {
+        padding-bottom: 80px;
+    }
+
+    .content
+    {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 20px;
+    }
+
+    .tracker, .sessions
+    {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:520px)
+{
+    .container
+    {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 20px;
+        padding-bottom: 120px;
+    }
+
+    .content
+    {
+        padding-top:0;
+    }
+
+    .progressTitle
+    {
+        top: 10%;
+        font-size: 64px;
+    }
+    
+    .sessionContent
+    {
+        column-gap: 0;
+    }
+
+    .support
+    {
+        bottom: 70px;
+    }
+}
+
+@media screen and (max-width:380px)
+{
+    .title, .mentor
+    {
+        text-align: center;
+        font-size: 22px;
+    }  
+}
+
+@media screen and (max-width:360px)
+{
+    .mentor
+    {
+        display: flex;
+        flex-direction: column;
+    }  
 }
