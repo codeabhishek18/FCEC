@@ -11,3 +11,23 @@
   --secondary-color:#FCF5ED;
   --primary-bg: black;
 }
+
+::-webkit-scrollbar 
+{
+  width: 5px;
+}
+
+::-webkit-scrollbar-track 
+{
+  background: black;
+}
+
+::-webkit-scrollbar-thumb 
+{
+  background: #AF8F6F;
+}
+
+::-webkit-scrollbar-thumb:hover 
+{
+  background: black;
+}

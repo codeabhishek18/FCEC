@@ -75,7 +75,7 @@
     font-size: 16px;
     width: 80%;
     text-align: center;
-    line-height: 30px;
+    line-height: 36px;
 }
 
 .why
@@ -96,6 +96,17 @@
     border-radius: 5px;
 }
 
+.footer
+{
+    padding-bottom: 80px;
+}
+
+.courseFooter
+{
+    display: flex;
+    column-gap: 10px;
+    width: 100%;
+}
 
 /* .courses
 {
@@ -125,6 +136,7 @@
     margin: 0;
     font-size: 22px;
     font-weight: 600;
+    text-align: center;
 }
 
 .desc
@@ -136,10 +148,21 @@
 {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 5px;
     font-size: 15px;
     font-weight: 500;
+    width: 50%;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+}
+
+.more:nth-child(1)
+{
+    background-color: antiquewhite;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .intro

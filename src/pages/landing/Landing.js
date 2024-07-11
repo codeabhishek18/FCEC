@@ -3,6 +3,8 @@ import Header from '../../components/header/Header'
 import landing from './Landing.module.css'
 import compliance from '../../assets/compliance.jpg'
 import Footer from '../../components/footer/Footer'
+import Chat from '../../components/chat/Chat'
+import Stats from '../../components/stats/Stats'
 
 const courses = [
     {
@@ -91,11 +93,12 @@ const navigate = useNavigate();
                 <h1 className={landing.heading}>Master Financial Crime Detection & Prevention</h1>
                 <p className={landing.subheading}>Unlock Your Potential with Expert-Led Online Training</p>
             </div>
+            <Stats/>
             <p className={landing.about}>
-                Welcome to Fin-Crime Education & Consultancy, where we empower individuals with essential knowledge 
+                Welcome to Fin-Crime Compliance Education & Consultancy, where we empower individuals with essential knowledge 
                 to combat financial crime. Our comprehensive e-learning course equips you with the skills and insights
                 needed to thrive in today's dynamic financial landscape.
-                Our e-learning course is meticulously designed to equip you with practical knowledge and strategic insights
+                Our courses are meticulously designed to equip you with practical knowledge and strategic insights
                 necessary to combat fraud, money laundering, and cybercrime effectively. Whether you're looking to advance 
                 your career in compliance, banking, law enforcement, or cybersecurity, this course provides the expertise 
                 and credentials to excel.
@@ -116,14 +119,15 @@ const navigate = useNavigate();
                 (
                     <div className={landing.courseCard} key={course.id}>
                         <p className={landing.title}>{course.title}</p>
-                        <div>
+                        <div className={landing.courseFooter}>
                             <p className={landing.more}>Explore</p>
+                            <p className={landing.more}>Join now</p>
                         </div>
                     </div>
                 ))}
             </div>
             <h1 className={landing.why}>Course Features</h1>
-            <div className={landing.introduction}>
+            <div className={`${landing.introduction} ${landing.footer}`}>
                 {features.map((content)=>
                 (
                     <div key={benifits.id} className={landing.benifits}>

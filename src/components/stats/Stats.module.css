@@ -1,0 +1,29 @@
+.container
+{
+    display: flex;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.column
+{
+    padding: 20px;
+    width: 33.34%;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.title
+{
+    font-size: 20px;
+    margin: 0;
+}
+
+.count
+{
+    font-size: 48px;
+    margin: 0;
+    font-weight: 600;
+}
+

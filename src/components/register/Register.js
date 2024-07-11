@@ -3,6 +3,7 @@ import register from './Register.module.css'
 import registerIcon from '../../assets/register.png'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { enqueueSnackbar } from 'notistack';
 
 const headers = [
     {
@@ -52,6 +53,7 @@ const Register = ({setShowForm}) =>
                 const response = await axios.post(url, {email: form.email, password: form.password}, { withCredentials: true });
                 localStorage.setItem('user', JSON.stringify(response.data.loggedUser.firstname));
                 navigate('/home')
+                enqueueSnackbar(`Logged in`, {variant: 'success'})
             }
             catch(error)
             {

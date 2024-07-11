@@ -4,6 +4,7 @@ import Register from '../register/Register';
 import { useEffect, useState } from 'react';
 import userIcon from '../../assets/user.png'
 import axios from 'axios';
+import { enqueueSnackbar } from 'notistack';
 
 const Header = () =>
 {
@@ -27,6 +28,7 @@ const Header = () =>
             localStorage.removeItem('user');
             setUser(null);
             navigate('/')
+            enqueueSnackbar('Logged out', {variant: 'success'})
         }
         catch(error)
         {
