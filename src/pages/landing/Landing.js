@@ -43,7 +43,7 @@ const navigate = useNavigate();
             <div className={landing.courses}>
                 {courses.map((course) =>
                 (
-                    <div className={landing.courseCard}>
+                    <div className={landing.courseCard} key={course.id}>
                         <h1 className={landing.title}>{course.title}</h1>
                         <p className={landing.more}>Read more</p>
                     </div>

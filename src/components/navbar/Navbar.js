@@ -65,7 +65,7 @@ const Navbar = () =>
             <div className={navbar.icons}>
                 {navIcons.map((icon)=>
                 (
-                    <img className={navbar.icon} src={icon.src} alt='icon' onClick={()=>setActive(icon.id)}/>
+                    <img className={navbar.icon} src={icon.src} alt='icon' onClick={()=>setActive(icon.id)} key={icon.id}/>
                 ))}
             </div>
             <div className={navbar.fixed}>
