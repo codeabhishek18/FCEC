@@ -1,24 +1,112 @@
 .container
 {
     height: 100%;
-    background-color: black;
-    padding: 20px;
+    background-color: var(--primary-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 90px;
 }
 
-.courses
+.header
+{
+    width: 60%;
+    padding: 30px;
+}
+
+.heading
+{
+    color: var(--primary-color);
+    font-size: 64px;
+    text-align: center;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.subheading
+{
+    color: var(--primary-bg);
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    color: var(--secondary-color);
+    /* background-color: var(--primary-color); */
+}
+
+.heroImage
+{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.introduction, .courses
+{
+    padding: 20px;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 100%;
+}
+
+.head
+{
+    background-color: var(--primary-color);
+    padding: 10px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.description
+{
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.about
+{
+    color: var(--secondary-color);
+    font-size: 16px;
+    width: 80%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.why
+{
+    color:var(--primary-color);
+    font-size: 50px;
+}
+
+.benifits, .courseCard
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 200px;
+    width: 20%;
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
+
+
+/* .courses
 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 30px;
     row-gap: 30px;
-}
+} */
 
-.courseCard
+/* .courseCard
 {
     display: flex;
     flex-direction: column;
@@ -28,14 +116,15 @@
     width: calc(25% - 45px);
     padding: 15px;
     border-radius: 8px;
-    background-color: var(--secondary-color);
-}
+    background-color: antiquewhite;
+} */
 
 .title
 {
     color: var(--primary-color);
     margin: 0;
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .desc
@@ -45,11 +134,11 @@
 
 .more
 {
-    background-color: black;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
 }
 
@@ -58,9 +147,15 @@
     color: var(--secondary-color);
     font-size: 16px;
     line-height: 28px;
-    padding: 40px 0;
-    display: flex;
     text-align: center;
+}
+
+
+.content
+{
+    padding: 40px;
+    background-color: rgba(0,0,0,0.5);
+    width: 60%;
 }
 
 @media screen and (max-width:520px)

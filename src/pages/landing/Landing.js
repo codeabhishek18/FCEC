@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import Header from '../../components/header/Header'
 import landing from './Landing.module.css'
-import compliance from '../../assets/compliance.png'
+import compliance from '../../assets/compliance.jpg'
+import Footer from '../../components/footer/Footer'
 
 const courses = [
     {
@@ -27,6 +28,57 @@ const courses = [
     }
 ]
 
+const benifits = [
+    {
+        id: 1,
+        name : 'Career Advancement',
+        description : 'Gain expertise sought after by employers in banking, compliance and cybersecurity.'
+    },
+    {
+        id: 2,
+        name : 'Practical Skills',
+        description : 'Learn real-world strategies for detecting and preventing money laundering, cybercrime.'
+    },
+    {
+        id: 3,
+        name : 'Flexible Learning',
+        description : 'Access modules at your own pace with live classes and interactive sessions.'
+    },
+    {
+        id: 4,
+        name : 'Global Perspective',
+        description : 'Understand international regulations and best practices in financial crime prevention.'
+    },
+    // {
+    //     id: 5,
+    //     name : 'Expert Guidance',
+    //     description : 'Learn from industry experts with hands-on experience in combating financial crime.'
+    // },
+]
+
+const features = [
+    {
+        id: 1,
+        name : 'Live Classes',
+        description : 'Engage with instructors and peers in real-time discussions.'
+    },
+    {
+        id: 2,
+        name : 'Interactive Module',
+        description : 'Dive deep into case studies and simulations for practical learning.'
+    },
+    {
+        id: 3,
+        name : 'Certification',
+        description : 'Earn a recognized certificate upon course completion.'
+    },
+    {
+        id: 4,
+        name : 'Community',
+        description : 'Join a network of passionate financial professionals.'
+    }
+]
+
 const Landing = () =>
 {
 const navigate = useNavigate();
@@ -34,21 +86,53 @@ const navigate = useNavigate();
     return(
         <div className={landing.container}>
             <Header/>
-            <div className={landing.intro}>
-                {/* <img className={landing.heroImage} src={compliance} alt='img'/> */}
-                <p>Mission of FinCrime Compliance Education & Consultancy (FCE&C) is to offer financial crime prevention education and training to college students and employees working in compliance field.
-                We offer training on transaction monitoring, KYC, and compliance international standards. This program intends to help compliance professionals and college students who aspire to work in the financial compliance industry.
-                </p>
+            <img className={landing.heroImage} src={compliance} alt='img'/>
+            <div className={landing.header}>
+                <h1 className={landing.heading}>Master Financial Crime Detection & Prevention</h1>
+                <p className={landing.subheading}>Unlock Your Potential with Expert-Led Online Training</p>
             </div>
+            <p className={landing.about}>
+                Welcome to Fin-Crime Education & Consultancy, where we empower individuals with essential knowledge 
+                to combat financial crime. Our comprehensive e-learning course equips you with the skills and insights
+                needed to thrive in today's dynamic financial landscape.
+                Our e-learning course is meticulously designed to equip you with practical knowledge and strategic insights
+                necessary to combat fraud, money laundering, and cybercrime effectively. Whether you're looking to advance 
+                your career in compliance, banking, law enforcement, or cybersecurity, this course provides the expertise 
+                and credentials to excel.
+            </p>
+            <h1 className={landing.why}>Why you should join us!</h1>
+            <div className={landing.introduction}>
+                {benifits.map((content)=>
+                (
+                    <div key={benifits.id} className={landing.benifits}>
+                        <span className={landing.head}>{content.name}</span>
+                        <p className={landing.description}>{content.description}</p>
+                    </div>
+                ))}
+            </div>
+            <h1 className={landing.why}>Courses offered</h1>
             <div className={landing.courses}>
                 {courses.map((course) =>
                 (
                     <div className={landing.courseCard} key={course.id}>
-                        <h1 className={landing.title}>{course.title}</h1>
-                        <p className={landing.more}>Read more</p>
+                        <p className={landing.title}>{course.title}</p>
+                        <div>
+                            <p className={landing.more}>Explore</p>
+                        </div>
                     </div>
                 ))}
             </div>
+            <h1 className={landing.why}>Course Features</h1>
+            <div className={landing.introduction}>
+                {features.map((content)=>
+                (
+                    <div key={benifits.id} className={landing.benifits}>
+                        <span className={landing.head}>{content.name}</span>
+                        <p className={landing.description}>{content.description}</p>
+                    </div>
+                ))}
+            </div>
+            <Footer/>
         </div>
     )
 }
