@@ -1,0 +1,32 @@
+.wrapper
+{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container
+{
+    width: 100%;
+    height: 100%;
+    padding: 110px 20px 20px;
+    display: flex;
+}
+
+.panel
+{
+    width: 250px;
+    height: 100%;
+}
+
+.view
+{
+    width: calc(100% - 250px);
+    padding: 20px;
+    height: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}

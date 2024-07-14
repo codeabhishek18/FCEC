@@ -9,7 +9,8 @@ import pending from '../../assets/pending.png'
 import close from '../../assets/close.png'
 import PieChartWithPaddingAngle from '../../components/piechart/PieChart'
 import Chat from '../../components/chat/Chat'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 export const sessions = [
     {
@@ -41,6 +42,16 @@ export const sessions = [
 const Home = () =>
 {
     const [showChat, setShowChat] = useState(false)
+    const [ user, setUser] = useState(null);
+
+    useEffect(()=>
+    {
+        const user = localStorage.getItem('user');
+        if(user)
+            setUser(JSON.parse(user));
+    },[])
+
+    console.log(user);
 
     return(
         <div className={home.container}>

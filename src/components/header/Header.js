@@ -1,10 +1,10 @@
 import header from './Header.module.css'
 import { useNavigate } from 'react-router-dom';
-import Register from '../register/Register';
 import { useEffect, useState } from 'react';
 import userIcon from '../../assets/user.png'
 import axios from 'axios';
 import { enqueueSnackbar } from 'notistack';
+import Login from '../login/Login';
 
 const Header = () =>
 {
@@ -44,10 +44,10 @@ const Header = () =>
                 <img className={header.profile} src={userIcon} alt='profile'/>
                 <p className={header.logout} onClick={logUserOut}>Logout</p>
             </div> :
-            <p className={header.logout} onClick={()=> setShowForm(true)}>Register</p>}
+            <p className={header.logout} onClick={()=> setShowForm(true)}>Login</p>}
             {showForm && 
             <div className={header.form}>
-                <Register setShowForm={setShowForm}/>
+                <Login setShowForm={setShowForm}/>
             </div>}            
         </div>
     )

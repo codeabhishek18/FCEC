@@ -1,0 +1,70 @@
+.wrapper
+{
+    background-color: var(--primary-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.heroImage
+{
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container
+{
+    width: 80%;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header
+{
+    width: 70%;
+    padding: 30px;
+    text-align: center;
+}
+
+.heading
+{
+    color: var(--primary-color);
+    font-size: 64px;
+    margin: 5px 5px 10px;
+}
+
+.subheading
+{
+    font-size: 20px;
+    margin: 0;
+    padding: 10px;
+    color: var(--secondary-color);
+}
+
+.benefits, .courses, .features
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 18px;
+    column-gap: 10px;
+}
+
+.about
+{
+    color: var(--secondary-color);
+    font-size: 16px;
+    text-align: center;
+    line-height: 36px;
+    margin: 0;
+}
+
+.commonHeaders
+{
+    color:var(--primary-color);
+    font-size: 50px;
+}

@@ -1,0 +1,116 @@
+.wrapper
+{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container
+{
+    width: 100%;
+    padding: 110px 20px 20px;
+    display: flex;
+}
+
+.panel
+{
+    height: 100%;
+    width: 250px;
+}
+
+.view
+{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    width: calc(100% - 250px);
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.createBatch
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 300px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 5px;
+    height: 285px;
+}
+
+input, select
+{
+    padding: 8px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.createButton
+{
+    border: 0;
+    padding: 10px;
+    font-weight: 500;
+    background: black;
+    color: var(--primary-color);
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+}
+
+.list
+{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.batchCard
+{
+    width: 300px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+}
+
+p
+{
+    margin: 0;
+}
+
+.header
+{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+.footer
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    color: rgba(0,0,0,0.3);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status
+{
+    color: var(--primary-color);
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: fit-content;
+}

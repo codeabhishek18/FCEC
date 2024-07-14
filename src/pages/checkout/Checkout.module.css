@@ -1,0 +1,10 @@
+.wrapper
+{
+    background-color: var(--primary-bg);
+}
+
+.container
+{
+    width: 80%;
+    padding: 80px 0;
+}
