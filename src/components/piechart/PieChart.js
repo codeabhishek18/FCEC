@@ -2,12 +2,17 @@ import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import { PieChart } from '@mui/x-charts/PieChart';
 
-const data = [
-  { label: 'Completed', value: 2, colors:'#069CD4'},
-  { label: 'Upcoming', value: 2, colors:'#EBF7FD' },
-];
+export default function PieChartWithPaddingAngle({sessionData}) 
+{
+  const completed = sessionData.sessions.filter((session) => session.status === 'Completed').length;
+  const pending = sessionData.sessions.length - completed;
 
-export default function PieChartWithPaddingAngle() {
+  const data = 
+  [
+    { label: 'Completed', value: completed, color:'rgb(96, 175, 174)'},
+    { label: 'Upcoming', value: pending, color:'#B55D42'},
+  ];
+
   return (
     <Stack direction="row">
       <PieChart

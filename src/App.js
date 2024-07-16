@@ -7,8 +7,10 @@ import { styled } from '@mui/material';
 import Course from './pages/course/Course';
 import Checkout from './pages/checkout/Checkout';
 import Homepage from './pages/homepage/Homepage';
-import AdminDashboard from './pages/adminDashboard/AdminDashboard';
 import Batches from './pages/batches/Batches';
+import Courses from './pages/courses/Courses';
+import Modules from './pages/modules/Modules';
+import Batch from './pages/batch/Batch';
 
 function App() 
 {
@@ -33,7 +35,11 @@ function App()
       <Router>
         <Routes>
           <Route path='/' element={<Homepage/>}/>
-          <Route path='/admin' element={<Batches/>}/>
+          <Route path='/batches' element={<Batches/>}/>
+          <Route path='/batches/:id' element={<Batch/>}/>
+          <Route path='/courses' element={<Courses/>}/>
+          <Route path='/course/:id' element={<Course/>}/>
+          <Route path='/modules/:id' element={<Modules/>}/>
           <Route path='/home' element={<Home/>}/>
           <Route path='/course' element={<Course/>}/>
           <Route path='/checkout' element={<Checkout/>}/>

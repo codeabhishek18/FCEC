@@ -1,22 +1,27 @@
 export const adminPanelList = [
     {
         id: 1,
-        title: 'Students'
+        title: 'Students',
+        navigation:'/students'
     },
     {
         id: 2,
-        title: 'Batches'
+        title: 'Batches',
+        navigation:'/batches'
     },
     {
         id: 3,
-        title: 'Courses'
+        title: 'Courses',
+        navigation:'/courses'
     },
     {
         id: 4,
-        title: 'Chat'
+        title: 'Chat',
+        navigation:'/chat'
     },
     {
         id: 5,
-        title: 'Notifications'
+        title: 'Notifications',
+        navigation:'/notifications'
     }
 ]

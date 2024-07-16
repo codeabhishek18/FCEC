@@ -19,13 +19,15 @@
     list-style: none;
     text-align: left;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--primary-color);
     padding: 12px;
+    cursor: pointer;
 }
 
-.list:hover
+.active
 {
     background-color: var(--secondary-color);
     border-radius: 5px;
+    color: black;
 }

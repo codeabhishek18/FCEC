@@ -3,43 +3,37 @@ import { baseUrl } from '../../constants'
 import axios from 'axios'
 import AdminPanel from '../../components/adminPanel/AdminPanel'
 import Header from '../../components/header/Header'
-import batchStyles from './Batches.module.css'
+import batchStyles from './Batch.module.css'
 import BatchForm from '../../components/batchForm/BatchForm'
 import BatchCard from '../../components/batchCard/BatchCard'
+import { useParams } from 'react-router-dom'
+import SessionCard from '../../components/sessionCard/SessionCard'
+import Progress from '../../components/progress/Progress'
 
-const Batches = () =>
+const Batch = () =>
 {
     const [ batchData, setBatchData ] = useState({title: '', courseId: '' , mentorId: '', startDate: '', endDate: ''})
-    const [ courses, setCourses ] = useState([]);
-    const [ mentors, setMentors ] = useState([]);
-    const [ batches, setBatches ] = useState([]);
+    const [ batches, setBatches ] = useState(null);
     const [ batchForm, setBatchForm ] = useState(false)
-
-    const getCourses = async () =>
-    {
-        const url = `${baseUrl}/course/all`
-        const response = await axios.get(url);
-        setCourses(response.data);
-    }
-
-    const getMentors = async () =>
-    {
-        const url = `${baseUrl}/mentor/all`
-        const response = await axios.get(url);
-        setMentors(response.data);
-    }
-
+    const {id} = useParams();
+   
     const getBatches = async () =>
     {
-        const url = `${baseUrl}/batch/all`
+        const url = `${baseUrl}/batch/${id}`
         const response = await axios.get(url);
         setBatches(response.data);
     }
 
+    const updateSessionStatus = async (sessionId, status) =>
+    {
+        const updatedStatus = status === 'Pending' ? 'Completed' : 'Pending'
+        const url = `${baseUrl}/session/update/${sessionId}`
+        await axios.put(url, {newStatus : updatedStatus});
+        getBatches();
+    }
+
     useEffect(()=>
     {
-       getCourses();
-       getMentors();
        getBatches();
     },[])
 
@@ -84,26 +78,31 @@ const Batches = () =>
     return(
         <div className={batchStyles.wrapper}>
             <Header/>
-            <div className={batchStyles.container}>
+            {batches && <div className={batchStyles.container}>
                 <div className={batchStyles.panel}>
                 </div>
                 <AdminPanel/>
                 <div className={batchStyles.view}>
-                    {batchForm && <BatchForm batchData={batchData} courses={courses} mentors={mentors} handleChange={handleChange} handleSubmit={handleSubmit} setBatchForm={setBatchForm}/>}
-                    <div className={batchStyles.header}>
-                        <h1>Batches</h1>
-                        <button className={batchStyles.add} onClick={()=> setBatchForm(true)}>+ Add Batch</button>
+                    <div className={batchStyles.batchDiv}>
+                        <div className={batchStyles.batches}>
+                            <Progress data={batches}/>
+                        </div>
+                        {/* {batchForm && <BatchForm batchData={batchData} courses={courses} mentors={mentors} handleChange={handleChange} handleSubmit={handleSubmit} setBatchForm={setBatchForm}/>} */}
+                        <div className={batchStyles.list}>
+                            {batches.sessions.map((session, index) =>
+                            (
+                                <SessionCard key={session._id} session={session} index={index} updateSessionStatus={updateSessionStatus}/>
+                            ))}
+                        </div>
                     </div>
-                    <div className={batchStyles.list}>
-                    {batches?.map((batch) =>
-                    (
-                        <BatchCard key={batch._id} data={batch} removeBatch={removeBatch}/>
-                    ))}
+                    <div className={batchStyles.enrollmentDiv}>
+                        <h1>Enrollments</h1>
+                        
                     </div>
                 </div>
-            </div>
+            </div>}
         </div>
     )
 }
 
-export default Batches
+export default Batch

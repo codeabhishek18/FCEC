@@ -1,0 +1,51 @@
+.container
+{
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.header, .footer
+{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.agenda, .statusIcon
+{
+    height: 20px;
+    cursor: pointer;
+}
+
+.status
+{
+    color: var(--primary-color);
+    border-radius: 5px;
+    font-weight: 500;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.sessionName
+{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+.updateStatus>button
+{
+    border: 0;
+    padding: 8px 12px;
+    background-color: rgba(0,0,0,0.3);
+    color: var(--secondary-color);
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,172 @@
+.wrapper
+{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container
+{
+    width: 100%;
+    padding: 110px 20px 20px;
+    display: flex;
+}
+
+.panel
+{
+    height: 100%;
+    width: 250px;
+}
+
+.view
+{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: calc(100% - 250px);
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.createBatch
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 300px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 5px;
+    height: 285px;
+}
+
+input, select
+{
+    padding: 8px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.createButton, .remove
+{
+    border: 0;
+    padding: 10px;
+    font-weight: 500;
+    background: black;
+    color: var(--primary-color);
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+}
+
+.listHeader
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listHeader>h1
+{
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 42px;
+}
+
+.add
+{
+    background-color: var(--primary-color);
+    color: black;
+    border: 0;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 00;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.list
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.courseCard
+{
+    width: calc(25% - 11.5px);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+}
+
+p
+{
+    margin: 0;
+}
+
+.header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title
+{
+    width: 85%;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.deleteIcon
+{
+    height: 20px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.footer
+{
+    display: flex;
+    column-gap: 10px;
+    color: rgba(0,0,0,0.3);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.details, .modules
+{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 50%;
+    cursor: pointer;
+}
+
+.modules:hover, .details:hover
+{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.moduleCount
+{
+    color: rgba(0,0,0,0.5);
+    font-weight: 500;
+}
