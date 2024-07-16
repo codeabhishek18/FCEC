@@ -10,7 +10,7 @@ const CourseCard = ({course}) =>
             <p className={courseCardStyles.title}>{course.title}</p>
             <div className={courseCardStyles.footer}>
                 <button className={courseCardStyles.buttons} onClick={()=> navigate(`/course/${course._id}`)}>Details</button>
-                <button className={courseCardStyles.buttons}>Join now</button>
+                <button className={courseCardStyles.buttons} onClick={()=> navigate('/register')}>Join now</button>
              </div>
         </div>
     )

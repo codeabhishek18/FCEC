@@ -24,8 +24,8 @@ const Progress = ({data}) =>
             </div>
             <div className={styles.footer}>
                 <p className={styles.mentor}>Sprint Mentor | <span>{data.mentorId.name}</span></p>
-                <p className={styles.pendingSessions}>{pendingSessions(data.sessions) === 0 ? 'Unlock certification now' : pendingSessions(data.sessions) +' more session(s) to unlock certification'}</p>
-                <p className={styles.certificate}><img src={certificate} alt='certificate'/>Download Certificate</p>
+                {/* <p className={styles.pendingSessions}>{pendingSessions(data.sessions) === 0 ? 'Unlock certification now' : pendingSessions(data.sessions) +' more session(s) to unlock certification'}</p>
+                <p className={styles.certificate}><img src={certificate} alt='certificate'/>Download Certificate</p> */}
             </div>
         </div>
     )

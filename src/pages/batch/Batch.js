@@ -9,6 +9,7 @@ import BatchCard from '../../components/batchCard/BatchCard'
 import { useParams } from 'react-router-dom'
 import SessionCard from '../../components/sessionCard/SessionCard'
 import Progress from '../../components/progress/Progress'
+import Enrollment from '../../components/enrollment/Enrollment'
 
 const Batch = () =>
 {
@@ -96,8 +97,12 @@ const Batch = () =>
                         </div>
                     </div>
                     <div className={batchStyles.enrollmentDiv}>
-                        <h1>Enrollments</h1>
-                        
+                        {
+                            batches.students.map((student)=>
+                            (
+                                <Enrollment student={student}/>
+                            ))
+                        }
                     </div>
                 </div>
             </div>}

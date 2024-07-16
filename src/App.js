@@ -42,7 +42,7 @@ function App()
           <Route path='/modules/:id' element={<Modules/>}/>
           <Route path='/home' element={<Home/>}/>
           <Route path='/course' element={<Course/>}/>
-          <Route path='/checkout' element={<Checkout/>}/>
+          <Route path='/register' element={<Checkout/>}/>
         </Routes>
       </Router>
       </SnackbarProvider>

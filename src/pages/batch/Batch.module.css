@@ -42,9 +42,6 @@
 
 .enrollmentDiv
 {
-    background-color: var(--secondary-color);
-    border-radius: 5px;
-    padding: 20px;
     width: 50%;
 }
 

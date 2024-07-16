@@ -1,7 +1,7 @@
 .container
 {
     width: 40px;
-    height: 10px;
+    height: 24px;
     background-color: rgba(0,0,0,0.2);
     border-radius: 20px;
     position: relative;
@@ -10,24 +10,24 @@
 
 .slider
 {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     position: absolute;
-    top: -50%;
+    top: 4px;
     transform: translateY(-50%);
     background-color: #B55D42;
 }
 
 .left
 {
-    transform: translateX(0%);
+    transform: translateX(4px);
     transition: transform 0.25s ease-in-out;
 }
 
 .right
 {
-    transform: translateX(100%);
+    transform: translateX(20px);
     transition: transform 0.25s ease-in-out;
     background-color: rgb(96, 175, 174);
 }
